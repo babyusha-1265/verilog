@@ -1,0 +1,27 @@
+/*
+1. Nets: Nets are continously driven by the combinational logic circuits.
+it means it cannot store any value.
+
+represented by "wire" 
+default value of net is 'Z' (high impedence)
+
+******
+wire a,b,y;
+assign y = a & b;
+********
+
+2. Regs: Reg is different form hardware register.
+
+Declaring a Reg doesn't mean declaring a flip flop or a latch 
+but it represents a storage element unlike net.
+
+use only through procedural statements
+
+************
+reg a,b,y;
+always@(posedge clock)
+ begin
+  y = a &b; 
+ end
+ *****************
+*/
