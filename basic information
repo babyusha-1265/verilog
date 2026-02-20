@@ -1,0 +1,51 @@
+/*there are mainly 4 used number systems in verilog.
+
+1. Binary: b or B
+2. Octal: o or O 
+3. Decimal: d or D 
+4. Hexadecimal: h or H 
+
+-----format: <size>'<base><number>------
+
+it takes default size of 32 bits. 
+if both base and size not mentioned it takes default of 32 bits and decimal number system notation.
+
+ex: 4'b1100 is same as 4'd12 in decimal notation
+
+if any negative numbers is represented, by default it will be converted to 2's complement form.
+*/
+
+/*there are mainly 3 types of operators, they are:
+1. High-speed
+  i. unary operators: (+,-,^,%,~) appear to the left of the operand.
+    ex: x = ~y; --> y is operator 
+    
+  ii. Binary operators: operators appear in between the operands.
+    ex: x = y ^ z 
+    
+  iii. ternary/Conditional operators: like a simple if else statements but they are written in a single line.
+  
+    --------format: conditional_expression ? True_expression : False_expression----------
+    
+    ex: x = (a && b && c) ? 1'b1 : 1'b0;
+    
+  iv. Identifier and keywords
+  
+    Identifier is the name given to a funcion, task or for a module in verilog.
+    must be in lowercase (case sensitive)
+    characters like Numbers, underscores, special characters like $ can be used for naming the identifier but they cannot be used as the first character of the identifier
+    
+    ex: my_identifier
+    
+  v. Datatypes
+    there are 4 basic values in verilog
+    
+    value Level      Description
+    0                 Logical Zero, F 
+    1                 Logical one, True 
+    X                 unknown value 
+    Z                 High impedence state 
+    
+*/
+
+
