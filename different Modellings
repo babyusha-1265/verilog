@@ -1,0 +1,36 @@
+//three levels of abstraction(Different perspectives or view at which a design can be viewed or analyzed)
+//Gate level Modelling
+//Data-flow Modelling
+//Behavioral Modelling
+
+//Register Transfer Level(RTL): low-level abstraction used in digital design to describe the Behavior and functionality of a digital circuit.
+
+//Gate level Modelling: if a circuit is represented completely using basic gates 
+
+//Half adder
+
+module half_adder(input a,b, output sum, carry);
+
+xor x1(sum,a,b);
+and a1(carry,a,b);
+
+endmodule
+
+//Data-flow Modelling: we make use of functions that define the working of the circuit instead of it's gate structure.
+
+module half_adder(input a,b, output sum,carry);
+
+  assign sum = a ^ b;
+  assign carry = a & b;
+  
+endmodule
+
+//Behavioral Modelling: the desingers describe the functionaliy of the circuit wihtout specifying the functionality and structure of digital circuit.
+
+module half_adder(input a,b, output sum,carry);
+  always@(*)
+  begin
+  sum = a^b;
+  carry = a & b;
+  
+endmodule
