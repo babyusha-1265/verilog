@@ -1,0 +1,47 @@
+// Module Declaration
+
+module helper(a,b,y,z);
+  intput a,b;
+  output y,z;
+
+  y = a&b;
+  z = a|b;
+endmodule
+
+/*always Block 
+
+ it is a procedural block. it describes swquential circuits(latches, flip-flops) or combinational circuits.
+ 
+ all always blocks are executed in parallel. 
+ but actually, they are executed in an order determinde by the simulation tool.
+ 
+ ----Signals assigned inside always block must be of type reg.---- 
+ ]
+ //Sensitivity list 
+ 
+ it contains signals that affect outputs.
+ 
+ Blocking Vs Non-Blocking
+ 
+ 
+ Blocking ----symbol: =-------
+ 
+ exectued sequentially.
+ 
+ Blocks next statements until it is executed.
+ 
+ LHS is updated after reading RHS of the same statement. 
+ Describes Multi-level combinational logic
+ 
+ if not triggere, it is uninitialized.
+ 
+ Non-Blocking ----------<=------------
+ 
+ Executed in parallel
+ RHS is read immediatey, but updating LHS starts after all reads are scheduled.
+ Describe FLIP-FLop assignment at the saem time regardless to the order or the dependence.
+ 
+ if not triggered, it keep the last value.
+ 
+ 
+ 
