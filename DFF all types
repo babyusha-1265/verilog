@@ -14,3 +14,54 @@ module dff_syn(
       q <= d;
   end 
 endmodule
+-----------------------------------------------------------------------------------------
+//DFF-Asychronous Reset(Active High)
+module dff_asyn(
+  input wire clk,
+  input wire rst,
+  input wire d,
+  output reg q 
+  );
+  
+always@(posedge clk or posedge rst) begin
+  if(rst)
+    q <= 1'b0;
+  else
+    q <= d;
+  end 
+endmodule
+---------------------------------------------------------------------------------
+//DFF-Active low Reset
+
+module DFF_al(
+  input wire clk,
+  input wire rst,
+  input wire d,
+  output reg q 
+  );
+  
+always@ (posedge clk or negedge rst) begin
+  if(!rst)
+    q <= 1'b0;
+  else
+    q <= d;
+  end 
+endmodule
+------------------------------------------------------------------
+//T-FF
+
+module TFF(
+  input wire clk,
+  input wire rst,
+  input wire t,
+  output reg q 
+  );
+  
+always(posedge clk or posedge rst) begin
+  if(rst)
+    q <= 1'b0;
+  else
+    q <= ~q;
+  end 
+endmodule
+--------------------------------------------------------
